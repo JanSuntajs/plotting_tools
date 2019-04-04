@@ -45,7 +45,7 @@ plots_root = '../Graphs/'
 
 
 def prepare_ax(ax, legend=True, fontsize=fontsize, grid=True,
-               whichGrid='major', ncol=1):
+               whichGrid='major', ncol=1, loc='best'):
     """
     Prepare axes for plotting
 
@@ -64,7 +64,7 @@ def prepare_ax(ax, legend=True, fontsize=fontsize, grid=True,
 
     ax.tick_params(axis='x', labelsize=fontsize[1], pad=5, direction='out')
     if legend:
-        ax.legend(loc='best', prop={
+        ax.legend(loc=loc, prop={
                   'size': fontsize[0]}, fontsize=fontsize[0],
                   framealpha=0.5, ncol=ncol,
                   handlelength=1.,
