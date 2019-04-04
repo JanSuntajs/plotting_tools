@@ -66,7 +66,12 @@ def prepare_ax(ax, legend=True, fontsize=fontsize, grid=True,
     if legend:
         ax.legend(loc='best', prop={
                   'size': fontsize[0]}, fontsize=fontsize[0],
-                  framealpha=0.5, ncol=ncol)
+                  framealpha=0.5, ncol=ncol,
+                  handlelength=1.,
+                  columnspacing=0.6,
+                  handletextpad=0.5,
+                  frameon=False)
+
     ax.tick_params(axis='x', labelsize=fontsize[1])
     ax.tick_params(axis='y', labelsize=fontsize[1])
     if grid:
